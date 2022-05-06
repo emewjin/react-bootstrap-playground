@@ -45,8 +45,8 @@ function App() {
                   className="me-2"
                   aria-label="Search"
                 />
-                <Button variant="outline-success">Search</Button>
               </Form>
+              <Button variant="primary">최근 강의</Button>
             </Nav>
           </Navbar.Collapse>
         </Container>
