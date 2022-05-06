@@ -10,6 +10,10 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+p {
+  margin: 0;
+}
+
 .btn-primary,
 .btn-primary:focus {
   background-color: #00c471;

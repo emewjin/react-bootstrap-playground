@@ -8,13 +8,44 @@ import {
   Navbar,
   NavDropdown,
   InputGroup,
+  Image,
 } from 'react-bootstrap';
+
+function Lecture({ isFirst = false }) {
+  return (
+    <>
+      {isFirst && <div className="h-[1px] bg-slate-300 w-full mt-2" />}
+      <div className="flex my-2">
+        <Form.Check type="checkbox" id="default-checkbox" />
+        <Image
+          className="mx-[16px]"
+          src="https://images.unsplash.com/photo-1511216335778-7cb8f49fa7a3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80"
+          rounded
+          width={120}
+          height={78}
+        />
+        <div>
+          <p>강의 이름 강의 이름 강의 이름</p>
+          <div className="flex items-center text-sm mt-1">
+            <p className="text-gray-400">지식공유자</p>
+            <div className="h-[10px] w-px mx-2 bg-gray-400" />
+            <p className="font-semibold text-primary-500">수강기한</p>
+          </div>
+        </div>
+        <div className="ml-20 self-start">X</div>
+        <div className="h-auto w-px bg-gray-300 mx-6 my-0" />
+        <p className="font-bold ml-auto self-start">99,999,999원</p>
+      </div>
+      <div className="h-[1px] bg-slate-300  w-full mt-2" />
+    </>
+  );
+}
 
 function App() {
   return (
     <>
       <Navbar expand="lg" className="shadow-md">
-        <Container fluid>
+        <Container fluid className="max-w-screen-lg">
           <Navbar.Brand href="#">inflearn</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
@@ -61,18 +92,28 @@ function App() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <main className="flex mt-3">
+      <main className="flex mt-3 mx-auto px-3 max-w-screen-lg">
         <section className="flex-1">
-          <h2 className="text-xl">장바구니</h2>
+          <h2 className="text-xl font-bold">수강바구니</h2>
           <div className="flex justify-between">
             <Form.Check
               type="checkbox"
               id="default-checkbox"
               label="전체선택 2/5"
             />
-            <Button variant="outline-secondary">선택삭제 X</Button>
+            <Button size="sm" variant="outline-secondary">
+              선택삭제 X
+            </Button>
           </div>
           <div className="h-[1px] bg-black w-full mt-2" />
+          <div className="flex my-2">
+            <span className="font-semibold mr-1">강의</span>
+            <span className="text-primary-500">2</span>
+            <span>/5</span>
+          </div>
+          {[1, 2, 3, 4].map((el) => (
+            <Lecture key={el} isFirst={el === 1} />
+          ))}
         </section>
         <aside className="w-[300px] ml-10">
           <div className="border border-slate-300 rounded-md p-4">
@@ -94,24 +135,49 @@ function App() {
               </Form.Group>
             </Form>
           </div>
-          <div className="border border-slate-300 rounded-md p-4 shadow-md mt-3">
+          <div className="border border-slate-300 rounded-md p-4 shadow-md mt-3 flex flex-col">
             <Form>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>구매자 이름</Form.Label>
-                <Form.Control type="text" placeholder="실명을 입력해주세요" />
-              </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>이메일</Form.Label>
-                <Form.Control type="email" placeholder="이메일 입력" />
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>휴대폰 번호(숫자만 입력)</Form.Label>
+                <Form.Label>쿠폰</Form.Label>
                 <InputGroup className="mb-3">
                   <FormControl placeholder="01012341234" />
-                  <Button variant="outline-secondary">인증요청</Button>
+                  <Button variant="outline-secondary">쿠폰선택</Button>
+                </InputGroup>
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>포인트</Form.Label>
+                <InputGroup className="mb-3">
+                  <FormControl placeholder="01012341234" />
+                  <Button variant="outline-secondary">전액사용</Button>
                 </InputGroup>
               </Form.Group>
             </Form>
+            <div>
+              <div className="flex justify-between">
+                <p className="text-sm mb-1 text-gray-500">선택상품 금액</p>
+                <p className="text-sm mb-1 text-gray-500">999,999,000원</p>
+              </div>
+              <div className="flex justify-between">
+                <p className="text-sm mb-1 text-red-500">할인금액</p>
+                <p className="text-sm mb-1 text-red-500">-60,000원</p>
+              </div>
+              <div className="flex justify-between">
+                <p className="text-sm mb-1 font-bold">총 결제금액</p>
+                <p className="text-sm mb-1 font-bold">999,000원</p>
+              </div>
+            </div>
+            <Button variant="dark" className="my-2">
+              15% 할인받기
+            </Button>
+            <Button className="mb-2">결제하기</Button>
+            <p className="text-xs text-gray-500">
+              회원 본인은 주문내용을 확인했으며, 구매조건 및 개인정보취급방침과
+              결제에 동의합니다.
+            </p>
+          </div>
+          <div className="flex justify-between mt-3 px-2">
+            <p className="text-gray-300 text-sm">궁금한 점이 있나요?</p>
+            <p className="text-gray-300 text-sm">문의하기</p>
           </div>
         </aside>
       </main>
