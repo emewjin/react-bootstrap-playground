@@ -1,0 +1,1 @@
+- tailwind class와 충돌있을 수도 있겠다 싶음
