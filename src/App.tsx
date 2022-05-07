@@ -9,6 +9,8 @@ import {
   NavDropdown,
   InputGroup,
   Image,
+  OverlayTrigger,
+  Tooltip,
 } from 'react-bootstrap';
 
 function Lecture({ isFirst = false }) {
@@ -92,9 +94,9 @@ function App() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <main className="flex mt-3 mx-auto px-3 max-w-screen-lg">
+      <main className="flex mt-8 mx-auto px-3 max-w-screen-lg">
         <section className="flex-1">
-          <h2 className="text-xl font-bold">수강바구니</h2>
+          <h2 className="text-xl mb-3 font-bold">수강바구니</h2>
           <div className="flex justify-between">
             <Form.Check
               type="checkbox"
@@ -116,39 +118,75 @@ function App() {
           ))}
         </section>
         <aside className="w-[300px] ml-10">
-          <div className="border border-slate-300 rounded-md p-4">
+          <div className="border rounded-md p-4">
             <Form>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Group className="mb-3 text-sm" controlId="formBasicEmail">
                 <Form.Label>구매자 이름</Form.Label>
                 <Form.Control type="text" placeholder="실명을 입력해주세요" />
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Group
+                className="mb-3 text-sm"
+                controlId="formBasicPassword"
+              >
                 <Form.Label>이메일</Form.Label>
                 <Form.Control type="email" placeholder="이메일 입력" />
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Group
+                className="mb-3 text-sm"
+                controlId="formBasicPassword"
+              >
                 <Form.Label>휴대폰 번호(숫자만 입력)</Form.Label>
                 <InputGroup className="mb-3">
                   <FormControl placeholder="01012341234" />
-                  <Button variant="outline-secondary">인증요청</Button>
+                  <Button size="sm" variant="outline-secondary">
+                    인증요청
+                  </Button>
                 </InputGroup>
               </Form.Group>
             </Form>
           </div>
-          <div className="border border-slate-300 rounded-md p-4 shadow-md mt-3 flex flex-col">
+          <div className="border rounded-md p-4 shadow-md mt-3 flex flex-col">
             <Form>
-              <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Group
+                className="mb-3 text-sm"
+                controlId="formBasicPassword"
+              >
                 <Form.Label>쿠폰</Form.Label>
+                <OverlayTrigger
+                  key="top"
+                  placement="top"
+                  overlay={
+                    <Tooltip id={`tooltip-top`}>쿠폰에 대한 설명</Tooltip>
+                  }
+                >
+                  <span className="ml-2">ℹ️</span>
+                </OverlayTrigger>
                 <InputGroup className="mb-3">
                   <FormControl placeholder="01012341234" />
-                  <Button variant="outline-secondary">쿠폰선택</Button>
+                  <Button size="sm" variant="outline-secondary">
+                    쿠폰선택
+                  </Button>
                 </InputGroup>
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Group
+                className="mb-3 text-sm"
+                controlId="formBasicPassword"
+              >
                 <Form.Label>포인트</Form.Label>
+                <OverlayTrigger
+                  key="top"
+                  placement="top"
+                  overlay={
+                    <Tooltip id={`tooltip-top`}>포인트에 대한 설명</Tooltip>
+                  }
+                >
+                  <span className="ml-2">ℹ️</span>
+                </OverlayTrigger>
                 <InputGroup className="mb-3">
                   <FormControl placeholder="01012341234" />
-                  <Button variant="outline-secondary">전액사용</Button>
+                  <Button size="sm" variant="outline-secondary">
+                    전액사용
+                  </Button>
                 </InputGroup>
               </Form.Group>
             </Form>
@@ -166,10 +204,12 @@ function App() {
                 <p className="text-sm mb-1 font-bold">999,000원</p>
               </div>
             </div>
-            <Button variant="dark" className="my-2">
+            <Button size="sm" variant="dark" className="my-2">
               15% 할인받기
             </Button>
-            <Button className="mb-2">결제하기</Button>
+            <Button size="sm" className="mb-2">
+              결제하기
+            </Button>
             <p className="text-xs text-gray-500">
               회원 본인은 주문내용을 확인했으며, 구매조건 및 개인정보취급방침과
               결제에 동의합니다.
