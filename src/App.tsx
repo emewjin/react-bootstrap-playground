@@ -74,13 +74,16 @@ function App() {
             <Nav>
               <Form className="d-flex">
                 <FormControl
+                  size="sm"
                   type="search"
                   placeholder="Search"
                   className="me-2"
                   aria-label="Search"
                 />
               </Form>
-              <Button variant="primary">최근 강의</Button>
+              <Button variant="primary" size="sm">
+                최근 강의
+              </Button>
               <button className="flex justify-center p-2 mx-2">🛒</button>
               <button className="flex justify-center p-2 mx-2">🔔</button>
               <button className="flex justify-center p-2 mx-2">👤</button>
@@ -116,14 +119,22 @@ function App() {
             <Form>
               <Form.Group className="mb-3 text-sm" controlId="formBasicEmail">
                 <Form.Label>구매자 이름</Form.Label>
-                <Form.Control type="text" placeholder="실명을 입력해주세요" />
+                <Form.Control
+                  size="sm"
+                  type="text"
+                  placeholder="실명을 입력해주세요"
+                />
               </Form.Group>
               <Form.Group
                 className="mb-3 text-sm"
                 controlId="formBasicPassword"
               >
                 <Form.Label>이메일</Form.Label>
-                <Form.Control type="email" placeholder="이메일 입력" />
+                <Form.Control
+                  size="sm"
+                  type="email"
+                  placeholder="이메일 입력"
+                />
               </Form.Group>
               <Form.Group
                 className="mb-3 text-sm"
@@ -131,7 +142,7 @@ function App() {
               >
                 <Form.Label>휴대폰 번호(숫자만 입력)</Form.Label>
                 <InputGroup className="mb-3">
-                  <FormControl placeholder="01012341234" />
+                  <FormControl size="sm" placeholder="01012341234" />
                   <Button size="sm" variant="outline-secondary">
                     인증요청
                   </Button>
@@ -156,7 +167,7 @@ function App() {
                   <span className="ml-2">ℹ️</span>
                 </OverlayTrigger>
                 <InputGroup className="mb-3">
-                  <FormControl placeholder="01012341234" />
+                  <FormControl size="sm" placeholder="01012341234" />
                   <Button size="sm" variant="outline-secondary">
                     쿠폰선택
                   </Button>
@@ -177,7 +188,7 @@ function App() {
                   <span className="ml-2">ℹ️</span>
                 </OverlayTrigger>
                 <InputGroup className="mb-3">
-                  <FormControl placeholder="01012341234" />
+                  <FormControl size="sm" placeholder="01012341234" />
                   <Button size="sm" variant="outline-secondary">
                     전액사용
                   </Button>
