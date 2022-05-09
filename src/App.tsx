@@ -28,15 +28,15 @@ function Lecture({ isFirst = false }) {
         />
         <div>
           <p>강의 이름 강의 이름 강의 이름</p>
-          <div className="flex items-center text-sm mt-1">
+          <div className="flex items-center mt-1 text-sm">
             <p className="text-gray-400">지식공유자</p>
             <div className="h-[10px] w-px mx-2 bg-gray-400" />
             <p className="font-semibold text-primary-500">수강기한</p>
           </div>
         </div>
-        <div className="ml-20 self-start">X</div>
-        <div className="h-auto w-px bg-gray-300 mx-6 my-0" />
-        <p className="font-bold ml-auto self-start">99,999,999원</p>
+        <div className="self-start ml-20">X</div>
+        <div className="w-px h-auto mx-6 my-0 bg-gray-300" />
+        <p className="self-start ml-auto font-bold">99,999,999원</p>
       </div>
       <div className="h-[1px] bg-slate-300  w-full mt-2" />
     </>
@@ -52,7 +52,7 @@ function App() {
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
-              className="me-auto my-2 my-lg-0"
+              className="my-2 me-auto my-lg-0"
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
@@ -81,22 +81,16 @@ function App() {
                 />
               </Form>
               <Button variant="primary">최근 강의</Button>
-              <button className="flex justify-center p-2 mx-2 hover:bg-primary-100">
-                🛒
-              </button>
-              <button className="flex justify-center p-2 mx-2 hover:bg-primary-100">
-                🔔
-              </button>
-              <button className="flex justify-center p-2 mx-2 hover:bg-primary-100">
-                👤
-              </button>
+              <button className="flex justify-center p-2 mx-2">🛒</button>
+              <button className="flex justify-center p-2 mx-2">🔔</button>
+              <button className="flex justify-center p-2 mx-2">👤</button>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <main className="flex mt-8 mx-auto px-3 max-w-screen-lg">
+      <main className="flex max-w-screen-lg px-3 mx-auto mt-8">
         <section className="flex-1">
-          <h2 className="text-xl mb-3 font-bold">수강바구니</h2>
+          <h2 className="mb-3 text-xl font-bold">수강바구니</h2>
           <div className="flex justify-between">
             <Form.Check
               type="checkbox"
@@ -109,7 +103,7 @@ function App() {
           </div>
           <div className="h-[1px] bg-black w-full mt-2" />
           <div className="flex my-2">
-            <span className="font-semibold mr-1">강의</span>
+            <span className="mr-1 font-semibold">강의</span>
             <span className="text-primary-500">2</span>
             <span>/5</span>
           </div>
@@ -118,7 +112,7 @@ function App() {
           ))}
         </section>
         <aside className="w-[300px] ml-10">
-          <div className="border rounded-md p-4">
+          <div className="p-4 border rounded-md">
             <Form>
               <Form.Group className="mb-3 text-sm" controlId="formBasicEmail">
                 <Form.Label>구매자 이름</Form.Label>
@@ -145,7 +139,7 @@ function App() {
               </Form.Group>
             </Form>
           </div>
-          <div className="border rounded-md p-4 shadow-md mt-3 flex flex-col">
+          <div className="flex flex-col p-4 mt-3 border rounded-md shadow-md">
             <Form>
               <Form.Group
                 className="mb-3 text-sm"
@@ -192,16 +186,16 @@ function App() {
             </Form>
             <div>
               <div className="flex justify-between">
-                <p className="text-sm mb-1 text-gray-500">선택상품 금액</p>
-                <p className="text-sm mb-1 text-gray-500">999,999,000원</p>
+                <p className="mb-1 text-sm text-gray-500">선택상품 금액</p>
+                <p className="mb-1 text-sm text-gray-500">999,999,000원</p>
               </div>
               <div className="flex justify-between">
-                <p className="text-sm mb-1 text-red-500">할인금액</p>
-                <p className="text-sm mb-1 text-red-500">-60,000원</p>
+                <p className="mb-1 text-sm text-red-500">할인금액</p>
+                <p className="mb-1 text-sm text-red-500">-60,000원</p>
               </div>
               <div className="flex justify-between">
-                <p className="text-sm mb-1 font-bold">총 결제금액</p>
-                <p className="text-sm mb-1 font-bold">999,000원</p>
+                <p className="mb-1 text-sm font-bold">총 결제금액</p>
+                <p className="mb-1 text-sm font-bold">999,000원</p>
               </div>
             </div>
             <Button size="sm" variant="dark" className="my-2">
@@ -215,9 +209,9 @@ function App() {
               결제에 동의합니다.
             </p>
           </div>
-          <div className="flex justify-between mt-3 px-2">
-            <p className="text-gray-300 text-sm">궁금한 점이 있나요?</p>
-            <p className="text-gray-300 text-sm">문의하기</p>
+          <div className="flex justify-between px-2 mt-3">
+            <p className="text-sm text-gray-300">궁금한 점이 있나요?</p>
+            <p className="text-sm text-gray-300">문의하기</p>
           </div>
         </aside>
       </main>
