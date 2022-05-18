@@ -1,0 +1,260 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Storybook/Introduction" />
+
+<style>{`
+  .subheading {
+    --mediumdark: '#999999';
+    font-weight: 900;
+    font-size: 13px;
+    color: #999;
+    letter-spacing: 6px;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    margin-top: 40px;
+  }
+
+  .link-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 10px;
+  }
+
+  @media (min-width: 620px) {
+    .link-list {
+      row-gap: 20px;
+      column-gap: 20px;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media all and (-ms-high-contrast:none) {
+  .link-list {
+      display: -ms-grid;
+      -ms-grid-columns: 1fr 1fr;
+      -ms-grid-rows: 1fr 1fr;
+    }
+  }
+
+  .link-item {
+    display: block;
+    padding: 20px 30px 20px 15px;
+    border: 1px solid #00000010;
+    border-radius: 5px;
+    transition: background 150ms ease-out, border 150ms ease-out, transform 150ms ease-out;
+    color: #333333;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .link-item:hover {
+    border-color: #1EA7FD50;
+    transform: translate3d(0, -3px, 0);
+    box-shadow: rgba(0, 0, 0, 0.08) 0 3px 10px 0;
+  }
+
+  .link-item:active {
+    border-color: #1EA7FD;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .link-item strong {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 2px;
+  }
+  
+  .link-item img, i {
+    height: 40px;
+    width: 40px;
+    margin-right: 15px;
+    flex: none;
+    font-size: 40px;
+  }
+
+  .link-item span {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .tip {
+    display: inline-block;
+    border-radius: 1em;
+    font-size: 11px;
+    line-height: 12px;
+    font-weight: 700;
+    background: #E7FDD8;
+    color: #66BF3C;
+    padding: 4px 12px;
+    margin-right: 10px;
+    vertical-align: top;
+  }
+
+  .tip-wrapper {
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .tip-wrapper code {
+    font-size: 12px;
+    display: inline-block;
+  }
+
+  
+`}</style>
+
+# Welcome to react-bootstrap-storybook
+
+This library is custom from the <strong>react-bootstrap</strong> library. 
+The changes are not too big but help developers save a lot of time when creating a new web application. 
+This is made possible by simplifying the use of components included in the <strong>react-bootstrap</strong> library.
+
+<div className="subheading">Dependencies</div>
+
+<div className="link-list">
+  <a
+    className="link-item"
+    href="https://storybook.js.org/docs/react/get-started/introduction"
+    target="_blank"
+  >
+    <i className="bi bi-bookmark"></i>
+    <span>
+      <strong>Storybook</strong>
+      Introduction to Storybook for React
+    </span>
+  </a>
+  <a
+    className="link-item"
+    href="https://react-bootstrap.github.io/getting-started/introduction/"
+    target="_blank"
+  >
+    <i className="bi bi-bookmark"></i>
+    <span>
+      <strong>Bootstrap</strong>
+      Learn how to include React Bootstrap in your project
+    </span>
+  </a>
+  <a
+    className="link-item"
+    href="https://react-bootstrap.github.io/components/alerts/"
+    target="_blank"
+  >
+    <i className="bi bi-bookmark"></i>
+    <span>
+      <strong>react-bootstrap</strong>
+      Learn how to include React Bootstrap in your project
+    </span>
+  </a>
+  <a
+    className="link-item"
+    href="https://icons.getbootstrap.com/"
+    target="_blank"
+  >
+    <i className="bi bi-bookmark"></i>
+    <span>
+      <strong>bootstrap-icons</strong>
+      Use them with or without Bootstrap in any project.
+    </span>
+  </a>
+  <a
+    className="link-item"
+    href="https://lodash.com/"
+    target="_blank"
+  >
+    <i className="bi bi-bookmark"></i>
+    <span>
+      <strong>lodash</strong>
+      A modern JavaScript utility library delivering modularity, performance & extras.
+    </span>
+  </a>
+  <a
+    className="link-item"
+    href="https://www.npmjs.com/package/yup"
+    target="_blank"
+  >
+    <i className="bi bi-bookmark"></i>
+    <span>
+      <strong>yup</strong>
+      Yup is a JavaScript schema builder for value parsing and validation.
+    </span>
+  </a>
+   <a
+    className="link-item"
+    href="https://formik.org/"
+    target="_blank"
+  >
+    <i className="bi bi-bookmark"></i>
+    <span>
+      <strong>formik</strong>
+      Formik is the world's most popular open source form library for React and React Native.
+    </span>
+  </a>
+</div>
+
+<div className="subheading">Getting Started</div>
+
+<div className="link-list">
+  <a className="link-item" href="https://www.npmjs.com/package/react-bootstrap-storybook" target="_blank">
+    <i className="bi bi-book"></i>
+    <span>
+      <strong>react-bootstrap-storybook</strong>
+      Installation and usage instructions
+    </span>
+  </a>
+  <a className="link-item" href="https://reactjs.org/docs/getting-started.html" target="_blank">
+    <i className="bi bi-book"></i>
+    <span>
+      <strong>create-react-app</strong>
+      This project was bootstrapped with Create React App.
+    </span>
+  </a>
+</div>
+
+<div className="subheading">Versions</div>
+
+<h5>v1.3.2</h5>
+
+<ul>
+  <li>
+    Modify package.json publish lib
+  </li>
+</ul>
+
+<h5>v1.3.1</h5>
+
+<ul>
+  <li>
+    Modify package.json publish lib
+  </li>
+</ul>
+
+<h5>v1.3.0</h5>
+
+<ul>
+  <li>
+    <strong>New components:</strong> CheckboxGroup, RadioGroup, Select, Toasts
+  </li>
+   <li>
+    <strong>New Demo react-bootstrap:</strong> Alert
+  </li>
+</ul>
+
+<h5>v1.2.0</h5>
+
+<ul>
+  <li>
+    <strong>Components:</strong> Button, ToggleButtonGroup, Modal, Confirm, Accordion, Badge, Breadcrumb, Card, Carousel,
+    Dropdowns, InputSearch, ListGroup, Navbars, Canvas, Paginations, Tables, Tabs, Tooltip, Popovers
+  </li>
+  <li>
+    <strong>Demo react-bootstrap:</strong> Form, InputGroup, Image, ProgressBar, Spinner
+  </li>
+</ul>
+
+<div className="tip-wrapper">
+  <span className="tip">License</span>MIT © bonnv79
+</div>

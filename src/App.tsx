@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  Button,
   Container,
   Form,
   FormControl,
@@ -11,6 +10,7 @@ import {
   Image,
   OverlayTrigger,
   Tooltip,
+  Button
 } from 'react-bootstrap';
 
 function Lecture({ isFirst = false }) {
