@@ -1,0 +1,45 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+$primary: #00C471;
+
+// 기존 m의 높이 수정
+$input-btn-padding-y: .438rem;
+
+// 기존 s의 높이 수정
+$input-btn-padding-y-sm: .375rem !default;
+$input-btn-padding-x-sm: .625rem !default;
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+// Then add additional custom code here
+// .btn-xl {
+//   padding: 10px 20px;
+//   font-size: 20px;
+//   border-radius: 10px;
+// }
+
+$btn-padding-y-xl: 10px;
+$btn-padding-x-xl: 18px;
+$btn-font-size-xl: 1.5rem;
+
+
+// xs 사이즈 추가 (수치는 기존 s그대로 사용)
+$input-btn-padding-y-xs: .25rem !default;
+$input-btn-padding-x-xs: .5rem !default;
+$input-btn-font-size-xs: $font-size-sm !default;
+$btn-border-radius-xs:  $border-radius-sm;
+$btn-padding-y-xs: $input-btn-padding-y-xs;
+$btn-padding-x-xs: $input-btn-padding-x-xs;
+$btn-font-size-xs: $input-btn-font-size-xs;
+
+
+.btn-xl {
+  @include button-size($btn-padding-y-xl, $btn-padding-x-xl, $btn-font-size-xl, $btn-border-radius);
+}
+
+.btn-xs {
+  @include button-size($btn-padding-y-xs, $btn-padding-x-xs, $btn-font-size-xs, $btn-border-radius);
+}
+

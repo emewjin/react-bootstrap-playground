@@ -209,10 +209,10 @@ function App() {
                 <p className="mb-1 text-sm font-bold">999,000원</p>
               </div>
             </div>
-            <Button size="sm" variant="dark" className="my-2">
+            <Button variant="dark" className="my-2">
               15% 할인받기
             </Button>
-            <Button size="sm" className="mb-2">
+            <Button className="mb-2 btn-xs">
               결제하기
             </Button>
             <p className="text-xs text-gray-500">
