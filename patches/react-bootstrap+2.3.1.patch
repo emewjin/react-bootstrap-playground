@@ -1,0 +1,26 @@
+diff --git a/node_modules/react-bootstrap/cjs/Button.d.ts b/node_modules/react-bootstrap/cjs/Button.d.ts
+index d7cefab..1de597a 100644
+--- a/node_modules/react-bootstrap/cjs/Button.d.ts
++++ b/node_modules/react-bootstrap/cjs/Button.d.ts
+@@ -4,7 +4,7 @@ import { ButtonVariant } from './types';
+ export interface ButtonProps extends BaseButtonProps, Omit<BsPrefixProps, 'as'> {
+     active?: boolean;
+     variant?: ButtonVariant;
+-    size?: 'sm' | 'lg';
++    size?: 'sm' | 'lg' | 'xs';
+ }
+ export declare type CommonButtonProps = 'href' | 'size' | 'variant' | 'disabled';
+ declare const Button: BsPrefixRefForwardingComponent<'button', ButtonProps>;
+diff --git a/node_modules/react-bootstrap/esm/Button.d.ts b/node_modules/react-bootstrap/esm/Button.d.ts
+index d7cefab..1de597a 100644
+--- a/node_modules/react-bootstrap/esm/Button.d.ts
++++ b/node_modules/react-bootstrap/esm/Button.d.ts
+@@ -4,7 +4,7 @@ import { ButtonVariant } from './types';
+ export interface ButtonProps extends BaseButtonProps, Omit<BsPrefixProps, 'as'> {
+     active?: boolean;
+     variant?: ButtonVariant;
+-    size?: 'sm' | 'lg';
++    size?: 'sm' | 'lg' | 'xs';
+ }
+ export declare type CommonButtonProps = 'href' | 'size' | 'variant' | 'disabled';
+ declare const Button: BsPrefixRefForwardingComponent<'button', ButtonProps>;

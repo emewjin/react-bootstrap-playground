@@ -212,7 +212,7 @@ function App() {
             <Button variant="dark" className="my-2">
               15% 할인받기
             </Button>
-            <Button className="mb-2 btn-xs">
+            <Button className="mb-2" size="xs">
               결제하기
             </Button>
             <p className="text-xs text-gray-500">
