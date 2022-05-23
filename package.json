@@ -29,7 +29,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "postinstall": "patch-package"
+    "postinstall": "patch-package",
+    "test-ct": "playwright test -c playwright-ct.config.ts"
   },
   "eslintConfig": {
     "extends": [
@@ -60,6 +61,7 @@
     ]
   },
   "devDependencies": {
+    "@playwright/experimental-ct-react": "^1.22.2",
     "@storybook/addon-actions": "^6.4.22",
     "@storybook/addon-essentials": "^6.4.22",
     "@storybook/addon-interactions": "^6.4.22",
